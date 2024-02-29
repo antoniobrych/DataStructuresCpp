@@ -1,28 +1,45 @@
-/******************************************************************************
-
-Welcome to GDB Online.
-  GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
-  C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, COBOL, HTML, CSS, JS
-  Code, Compile, Run and Debug online from anywhere in world.
-
-*******************************************************************************/
 #include <stdio.h>
 #include <iostream>
+#include <cmath>
 
+using namespace std;
+
+long double calcIMC(long double height,long double weight){
+
+  return (weight/pow(height,2));
+
+}
 int main(void)
 {
-
-    auto j = 10;
-    
-    if((j > 10)||(j>0)){
-        
-        std::cout << "johnnny";
-    }
-    
-    bool test = true;
-    
-    int testbool = test ? 5:6;
-    
-    std::cout << testbool;
+  long double height=1.78;
+  long double weight = 64;
+  long double imc = calcIMC(height,weight);
+  std::cout << "IMC = " << imc<<"\n";
+  if(imc < 17.0){
+    std::cout << "Muito abaixo do peso";
+  }
+  else if ((imc >=17)&&(imc<18.5))
+  {
+    std::cout << "Abaixo do peso";
+  }
+  else if ((imc >=18.5)&&(imc<25))
+  {
+    std::cout << "Peso Normal";
+  }
+  else if ((imc >=25)&&(imc<30))
+  {
+    std::cout << "Acima do peso";
+  }
+  else if ((imc >=30)&&(imc<35))
+  {
+    std::cout << "Obesidade";
+  }
+  else if ((imc >=35)&&(imc<40))
+  {
+    std::cout << "Obesidade Severa";
+  }
+  else{
+    std::cout << "Obesidade mórbida";
+  }
     return 0;
 }
