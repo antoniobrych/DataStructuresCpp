@@ -4,16 +4,16 @@
 
 using namespace std;
 
-long double calcIMC(long double height,long double weight){
+long double calcIMC(long double ld_height,long double ld_weight){
 
-  return (weight/pow(height,2));
+  return (ld_weight/pow(ld_height,2));
 
 }
 int main(void)
 {
-  long double height=1.78;
-  long double weight = 64;
-  long double imc = calcIMC(height,weight);
+  long double ld_height=1.78;
+  long double ld_weight = 64;
+  long double imc = calcIMC(ld_height,ld_weight);
   std::cout << "IMC = " << imc<<"\n";
   if(imc < 17.0){
     std::cout << "Muito abaixo do peso";
@@ -43,3 +43,4 @@ int main(void)
   }
     return 0;
 }
+
