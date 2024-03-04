@@ -1,0 +1,59 @@
+#include <iostream>
+using std::cout;
+using std::endl;
+using std::string;
+
+
+int main()
+{
+    
+    int iNum1 = 42;
+    int iNum2 = 0;
+    int iNum3 = 17;
+    //Cuidado, em algumas plataformas não há atribuição automática de variáveis vazias a 0
+    //podem conter, assim, lixo da memória.
+    std::cout<<"Valor de Variável vazia: " << iNum2;
+    //tipo short 2 bytes somente
+    short sNum4 = 0;
+    std::cout<<'\n'<<"Tam. de Variável vazia 2 tipo Short:  " << sizeof(sNum4);
+    //tipo long 8 bytes 
+    long lNum5 = 0;
+    std::cout<<'\n'<<"Tam. de Variável vazia 2 tipo Long:  " << sizeof(lNum5);
+    //tipo long long 
+    long long llNum5 = 0;
+    std::cout<<'\n'<<"Tam. de Variável vazia 2 tipo Long Long:  " << sizeof(llNum5);
+    
+    //Floats
+    // para ints, tam. + tipo ja está subentendido
+    // usa-se short não short int, p. exemplo.
+    float fNum = 0.1;
+    double dNum = 0.01;
+    long double ldNum = 0.01;
+    
+  
+    std::cout<<'\n'<<"Tam. de Variável vazia tipo float:  " << sizeof(fNum);
+    //tipo long 8 bytes 
+    std::cout<<'\n'<<"Tam. de Variável vazia tipo Long:  " << sizeof(dNum);
+    //tipo long long 
+    std::cout<<'\n'<<"Tam. de Variável vazia tipo Long Long:  " << sizeof(ldNum);
+    
+    //Chars
+    //guardam um caracter
+    
+    char cVal = 'E';
+    
+    std::cout<<'\n'<<"Tam. de Variável vazia tipo char:  " << sizeof(cVal)<<" com valor: "<<cVal;
+    char c_palavra_1 = 77;
+    char c_palavra_2 = 0x41;
+    char c_palavra_3 = 0b1110000;
+    std::cout<<endl<<cVal;
+    std::cout<<c_palavra_1;
+    std::cout<<c_palavra_2;
+    std::cout<<c_palavra_3<<endl;
+
+    string strFrase = "EMap";
+
+    std::cout<<'\n'<<"Tam. de Variável vazia tipo string:  " << sizeof(strFrase)<<" com valor: "<<strFrase;
+
+    return 0;
+}
