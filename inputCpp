@@ -1,0 +1,19 @@
+#include <iostream>
+using std::cout;
+using std::endl;
+using std::string;
+using std::cin;
+
+int main()
+{
+  int iValor = 42;
+  int iValorLido = 0;
+  int iResultado = 0;
+
+  cin >> iValorLido;
+
+  iResultado = (iValorLido<iValor)?0:1;
+  cout << iResultado; 
+  
+  return 0;
+}
