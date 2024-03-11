@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <iostream>
+
+
+using std::cout;
+using std::endl;
+using std::string;
+
+int main()
+{
+    int i_counter = 0;
+    while(i_counter<5)
+    {
+     cout <<i_counter<< ":contador \n?";
+     i_counter++;
+    }
+    
+    i_counter = 0;
+    do
+    {
+     cout <<i_counter<< ":contador \n?";
+     i_counter++;
+    }
+    while(i_counter<5);
+    
+    for (int i = 0;i < 11; i++)
+    {
+        for (int j = 1;j < 11; j++)
+        {
+            cout << "(" << i<<','<<j << ")" << "\n";
+        }
+    }
+    return 0;
+}
