@@ -1,0 +1,65 @@
+#include <cmath>
+#include <stdio.h>
+#include <iostream>
+
+using std::cin;
+using std::cout;
+using std::endl;
+using std::string;
+
+//void, tipo de algo que não existe
+//retorno não existente
+ 
+void frasePreferida(){
+    cout <<"Eu adoro a EMAp"<<endl;
+}
+void montaFrase(char chArtigo, string strPalavra="EMAp"){
+    
+    cout <<"Eu adoro" << chArtigo << " " << strPalavra<<endl;
+}
+int modulo(int iValor){
+    return abs(iValor);
+}
+float moduloFloat(float iValor){
+    return fabs(iValor);
+}
+int potenciacao(int iValor1,int iValor2){
+    return pow(iValor1,iValor2);
+}
+void minhaFunc(int arriNumeros[],int iTamVetor){
+    for (int i=0;i<iTamVetor;i++){
+        cout << arriNumeros[i] << endl;
+    }
+}
+int soma(int iVal1,int iVal2){
+    
+    return iVal1 + iVal2;
+}
+//assinatura de funcao:
+//nome(tipo1...tipo param n)
+//ex. soma(int, int)
+int soma(int iVal1,int iVal2,int iVal3){
+    
+    return iVal1 + iVal2 + iVal3;
+}
+// se a linguagem permitisse sobrecarga alterando o tipo de retorno
+// geraria ambiguidade, não seria portanto decidível.
+//por isso a assinatura de soma é:
+// soma(int, int)
+int main()
+{
+    int arriNumeros[4] = {1,2,3,4};
+    int iTamVetor = sizeof(arriNumeros)/sizeof(arriNumeros[0]);
+
+    frasePreferida();
+    montaFrase('a',"EMAp");
+    cout << "Resultado potenciacao" << " " <<potenciacao(2,10)<<endl;
+    cout << "Resultado modulo de float" << " " <<moduloFloat(-20.278)<<endl;
+    minhaFunc(arriNumeros,iTamVetor);
+    cout << "Resultado modulo de int" << " " <<modulo(-20)<<endl;
+    cout << "Resultado soma" << " " <<soma(-3,-3)<<endl;
+    cout << "Resultado soma" << " " <<soma(-3,-3,1)<<endl;
+
+
+    return 0;
+}
